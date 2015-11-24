@@ -14,6 +14,14 @@ def main():
 	parser.add_argument('input_file', help="Input file containing our data")
 	parser.add_argument('field_name', help="Data field to anumate")	
 	args = parser.parse_args()
+	
+	# This is the same as sying:
+	# f= nc.Dataset(args.input_file)
+	with nc.Dataset(args.input_file) as f:
+		vorticity = f.variables['vorticity_z']
+		vorticity = vorticity[:]
+	
+
 	return True
 
 if __name__=="__main__":
