@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 
 import sys
+import argparse
+import numpy as np
+import netCDF4 as nc
 
 """
 Comments here about the script
