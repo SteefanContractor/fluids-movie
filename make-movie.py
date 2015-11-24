@@ -10,7 +10,10 @@ Comments here about the script
 """
 
 def main():
-	print "Hello World!"
+	parser = argparse.ArgumentParser()
+	parser.add_argument('input_file', help="Input file containing our data")
+	parser.add_argument('field_name', help="Data field to anumate")	
+	args = parser.parse_args()
 	return True
 
 if __name__=="__main__":
